@@ -1,0 +1,319 @@
+<!-- ============================= -->
+<!--        INDEX / HOME PAGE      -->
+<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- FIXED NAVBAR              -->
+    <!-- ========================= -->
+    <nav class="navbar fixed-top custom-nav">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <img src="images/logo-purple.png" class="nav-logo" />
+            <h1>The Lost Coin</h1>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="aboutMe.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            </ul>
+            <img src="images/logo-purple.png" class="nav-logo" />
+        </div>
+    </nav>
+
+    <div class="container page-space">
+
+        <!-- ========================= -->
+        <!-- REACH OUT FLOAT BUTTON    -->
+        <!-- ========================= -->
+        <input type="checkbox" id="contactToggle" />
+        <label for="contactToggle" class="reach-float-btn">Reach Out</label>
+
+        <!-- ========================= -->
+        <!-- SLIDE-OUT REACH OUT PANEL   -->
+        <!-- ========================= -->
+        <div class="contact-panel">
+            <h4 class="text-center mb-3">Contact Us</h4>
+
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+                <label class="fw-bold">Name</label>
+                <input name="name" type="text" class="form-control mb-2" required />
+
+                <label class="fw-bold">Email</label>
+                <input name="email" type="email" class="form-control mb-2" required />
+
+                <label class="fw-bold">Phone (Optional)</label>
+                <input name="phone" type="text" class="form-control mb-2" />
+
+                <label class="fw-bold">Interested In</label>
+                <select name="service" class="form-select mb-2" required>
+                    <option selected disabled>Choose a service...</option>
+                    <option>Tax Resolution</option>
+                    <option>Forensic Accounting</option>
+                    <option>Free Consultation</option>
+                    <option>Other</option>
+                </select>
+
+                <label class="fw-bold">Message</label>
+                <textarea name="message" class="form-control mb-3" rows="4" required></textarea>
+
+                <button class="btn w-100 reach-submit">Submit</button>
+            </form>
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- WELCOME SECTION           -->
+        <!-- ========================= -->
+        <div class="row align-items-center mb-5 section-border">
+            <div class="col-md-6">
+                <h2>Welcome</h2>
+                <p>Lynette operates and manages The Lost Coin,she has over 30 years of financial experience in
+                    audit, accounting, tax, analysis, and investigations. She is a Certified Public Accountant, a
+                    Certified Fraud Examiner, is Certified in Financial Forensics, and holds a Masters Degree in
+                    Economic Crime Management. She has prepared hundreds of individual and corporate tax returns and
+                    payroll tax filings. More recently, she spent two years in New Orleans performing fraud
+                    investigation and forensic accounting work for the largest class-action court ordered settlement
+                    program in the history of the United States.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="images/Lynette Rhodes.jpg" class="oval-image" />
+            </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- HOW TO REACH OUT LINKS     -->
+        <!-- ========================= -->
+        <div class="card p-4 mt-5 section-border">
+            <h1>Where to reach me!</h1>
+            <ul class="list-unstyled contact-links">
+
+                <!-- Phone -->
+                <li class="mb-2">
+                    <strong>Phone:</strong>
+                    <a href="tel:(417) 427-3600">(417) 427-3600</a>
+                </li>
+
+                <!-- Email -->
+                <li class="mb-2">
+                    <strong>Email:</strong>
+                    <a href="mailto: info@thelostcoinllc.com"> info@thelostcoinllc.com</a>
+                </li>
+
+                <!-- Facebook -->
+                <li class="mb-2">
+                    <strong>Facebook:</strong>
+                    <a href="https://www.facebook.com/thelostcoinllc" target="_blank">Visit My Facebook</a>
+                </li>
+
+                <!-- LinkedIn -->
+                <li class="mb-2">
+                    <strong>LinkedIn:</strong>
+                    <a href="https://www.linkedin.com/in/lynetterhodes/" target="_blank">Connect on LinkedIn</a>
+                </li>
+
+                <!-- TaxCure -->
+                <li class="mb-2">
+                    <strong>TaxCure:</strong>
+                    <a href="https://taxcure.com/professionals/lynette-rhodes/profile" target="_blank">TaxCure</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- SERVICE PREVIEW CARDS     -->
+        <!-- ========================= -->
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <a href="services.html" class="service-preview-card section-border">
+                    <h5>Tax Resolution</h5>
+                    <p>You DON’T want to deal with your tax situation yourself… but you don’t want to pay high rates
+                        for someone else to handle it either! We’ve got you covered – we’re a local company that
+                        provides personalized tax resolution service at a fraction of the cost of those large
+                        national tax firms.</p>
+                </a>
+            </div>
+
+            <div class="col-md-6">
+                <a href="services.html" class="service-preview-card section-border">
+                    <h5>Forensic Accounting</h5>
+                    <p>So, if your business is bringing in $1 million in annual revenues, you could be losing
+                        $50,000 of those hard-earned dollars to occupational fraud – fraud committed by employees
+                        against their employers.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- CLIENT REVIEW CAROUSEL    -->
+        <!-- ========================= -->
+        <h3 class="text-center mb-3">Client Reviews</h3>
+        <div id="reviewsCarousel" class="carousel slide section-border" data-bs-ride="carousel">
+
+            <!-- Carousel Items -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="review-card">
+                        <p>“Lynette was very informative & very helpful to start the process of resolving myvtsx
+                            issues with the stste of Oklahoma. I received a notice in 5/2025 for taxes due as a
+                            result of gsmbling winnings for 2019.. She told me who to contact to get the specifics.
+                            Lynette was always been available for any questions & eager to help me! Due to health
+                            issues, I have not gotten her all the information she has needed to finish this process
+                            up. I am looking forward to continue working with Lynette . I feel she's honest,
+                            trustworthy.protects my best is interest as she uses safe internet communication
+                            practices. She is definitely a person I would use for all of my tax issues.”</p>
+                        <h6>- Teresa M.</h6>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="review-card">
+                        <p>“Lynette provides bookkeeping and tax preparation services for our concern. Her most
+                            recent accomplishment on our behalf, was to reverse a fine levied by the IRS; this
+                            brought back to our business more than $1700.00. She gives tax advice where appropriate
+                            and provides education when we are straying from good form. She is a delight to interact
+                            with, attentive to detail and easily contacted when needed. We are grateful for her
+                            presence and input. Therefore, we do, indeed, recommend her to you, without
+                            reservation.”</p>
+                        <h6>- Steve K.</h6>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="review-card">
+                        <p>“Lynette's work resulted in an accepted Offer in Compromise with the Internal Revenue
+                            Service that reduced the amount I owed from over $300,000 to around $50,000, saving me
+                            $250,000! This was accomplished through her extreme diligence in developing a thorough
+                            understanding of my overall situation...both the causes of my debt, and a realistic and
+                            data-based proposal for resolution. Lynette stayed in constant communication with me
+                            while negotiating with the IRS offer specialist assigned to my case. The ongoing process
+                            led to my increasing confidence and comfort level that Lynette would be successful in
+                            achieving the best result possible. The final outcome definitely speaks for itself!”</p>
+                        <h6>- Brian M.</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls (Arrows) -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- ========================= -->
+<!--        FOOTER             -->
+<!-- ========================= -->
+<footer class="footer-bg text-dark mt-5 pt-4 pb-4 section-border">
+    <div class="container">
+
+        <h5 class="mb-3">Disclaimers</h5>
+
+        <!-- Disclaimer 1 -->
+        <div class="mb-3">
+            <a class="d-flex justify-content-between align-items-center text-dark text-decoration-none fw-bold"
+                data-bs-toggle="collapse" href="#disclaimer1" role="button" aria-expanded="false"
+                aria-controls="disclaimer1">
+                <span>Disclaimer:</span>
+                <span class="arrow">▼</span>
+            </a>
+            <div class="collapse mt-2" id="disclaimer1">
+                <p class="mb-0">
+                    No Rendering of Advice – The information contained within this website is provided for informational
+                    purposes only and is not intended to substitute for obtaining accounting, tax, or financial advice
+                    from a professional accountant. Presentation of the information via the Internet is not intended to
+                    create, and receipt does not constitute an accountant-client relationship. Internet subscribers,
+                    users and online readers are advised not to act upon this information without seeking the service of
+                    a professional accountant. Any U.S. federal tax advice contained in this website is not intended to
+                    be used for the purpose of avoiding penalties under U.S. federal tax law.
+                </p>
+            </div>
+        </div>
+
+        <!-- Disclaimer 2 -->
+        <div class="mb-3">
+            <a class="d-flex justify-content-between align-items-center text-dark text-decoration-none fw-bold"
+                data-bs-toggle="collapse" href="#disclaimer2" role="button" aria-expanded="false"
+                aria-controls="disclaimer2">
+                <span>Disclaimer of Warranties and Limitations of Liability:</span>
+                <span class="arrow">▼</span>
+            </a>
+            <div class="collapse mt-2" id="disclaimer2">
+                <p class="mb-0">
+                    This website is provided on an “as is” and “as available” basis. Use of this website is at your own
+                    risk. We and our suppliers disclaim all warranties. Neither we nor our suppliers shall be liable for
+                    any damages of any kind with the use of this website.
+                </p>
+            </div>
+        </div>
+
+        <!-- Disclaimer 3 -->
+        <div class="mb-3">
+            <a class="d-flex justify-content-between align-items-center text-dark text-decoration-none fw-bold"
+                data-bs-toggle="collapse" href="#disclaimer3" role="button" aria-expanded="false"
+                aria-controls="disclaimer3">
+                <span>Accuracy of Information:</span>
+                <span class="arrow">▼</span>
+            </a>
+            <div class="collapse mt-2" id="disclaimer3">
+                <p class="mb-0">
+                    While we use reasonable efforts to furnish accurate and up-to-date information, we do not warrant
+                    that any information contained in or made available through this website is accurate, complete,
+                    reliable, current or error-free. We assume no liability or responsibility for any errors or
+                    omissions in the content of this website or such other materials or communications.
+                </p>
+            </div>
+        </div>
+
+        <!-- Disclaimer 4 -->
+        <div class="mb-3">
+            <a class="d-flex justify-content-between align-items-center text-dark text-decoration-none fw-bold"
+                data-bs-toggle="collapse" href="#disclaimer4" role="button" aria-expanded="false"
+                aria-controls="disclaimer4">
+                <span>Links to Third Party Websites </span>
+                <span class="arrow">▼</span>
+            </a>
+            <div class="collapse mt-2" id="disclaimer4">
+                <p class="mb-0">
+                    For your convenience, this website may contain hyperlinks to websites and servers maintained by
+                    third parties. We do not control, evaluate, endorse or guarantee content found in those sites. We do
+                    not assume any responsibility or liability for the actions, products, services and content of these
+                    sites or the parties that operate them. Your use of such sites is entirely at your own risk.
+                </p>
+            </div>
+        </div>
+
+        <p class="text-center mt-4 mb-0">&copy; 2021 The Lost Coin, LLC - All Rights Reserved</p>
+    </div>
+</footer>
+</body>
+
+
+</html>

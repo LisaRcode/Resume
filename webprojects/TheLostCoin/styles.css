@@ -1,0 +1,359 @@
+/* ------------------------ */
+/* STYLES SHEET */
+/* ------------------------ */
+/* Apply handwriting font sitewide */
+body, html {
+    font-family: "Patrick Hand", cursive !important;  
+    /* overrides other fonts with !important */
+}
+
+
+/* ------------------------ */
+/* COLOR VARIABLES          */
+/* ------------------------ */
+:root {
+  --light-purple: #f3e8ff;  /* Light background color */
+  --soft-purple: #e3d0ff;   /* Slightly darker for panels or secondary backgrounds */
+  --mid-purple: #c6a8ff;    /* Medium purple for borders, accents */
+  --deep-purple: #9b6cff;   /* Dark purple for buttons, highlights */
+  --text-dark: #3d2b57;     /* Dark text color */
+}
+
+
+/* ------------------------ */
+/* GLOBAL STYLING           */
+/* ------------------------ */
+body {
+  background: var(--light-purple);  /* Sets page background color */
+  color: var(--text-dark);           /* Default text color */
+}
+
+
+/* Headings sizing */
+h1 {
+    font-size: 42px;     /* Large main headings */
+    font-weight: 700;    /* Bold */
+}
+
+h2 {
+    font-size: 34px;     /* Secondary headings */
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 28px;     /* Tertiary headings */
+    font-weight: 700;
+}
+
+
+.page-space {
+  margin-top: 120px;      /* Pushes content down below fixed navbar */
+  margin-bottom: 50px;    /* Adds space at bottom */
+}
+
+
+/* ------------------------ */
+/* Section Borders for Visualization */
+/* ------------------------ */
+.section-border {
+  border: 3px solid var(--deep-purple); /* Purple border around sections */
+  border-radius: 15px;                  /* Rounded corners */
+  padding: 15px;                        /* Internal spacing inside the section */
+}
+
+/* ------------------------ */
+/* NAVBAR                   */
+/* ------------------------ */
+
+.custom-nav {
+  background: var(--mid-purple);                 /* Navbar color */
+  padding: 10px;                                 /* Internal padding */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);       /* Slight shadow for depth */
+}
+
+.nav-logo {
+  width: 60px;          /* Logo width */
+  height: 60px;         /* Logo height */
+  object-fit: contain;  /* Ensures logo scales without distortion */
+}
+
+.nav-link {
+  color: white !important;   /* Nav links are white */
+  font-weight: bold;
+  transition: 0.3s;          /* Smooth hover effect */
+}
+
+.nav-link:hover {
+  color: var(--deep-purple) !important; /* Text turns dark purple on hover */
+  background: white;                     /* Background turns white */
+  padding: 5px 10px;                     /* Adds padding to hover area */
+  border-radius: 8px;                    /* Rounded corners on hover */
+}
+
+
+/* ------------------------ */
+/* OVAL IMAGE               */
+/* ------------------------ */
+.oval-image {
+  width: 260px;                     /* Width of image */
+  height: 320px;                    /* Height of image */
+  border-radius: 50%;               /* Makes image a perfect oval */
+  object-fit: cover;                /* Crops image to fill the oval without distortion */
+  border: 6px solid var(--deep-purple); /* Purple border around image */
+}
+
+
+/* ------------------------ */
+/* SERVICE PREVIEW CARDS    */
+/* ------------------------ */
+.service-preview-card {
+  display: block;                  /* Makes it block-level */
+  padding: 20px;                   /* Inner spacing */
+  background: white;               /* White background */
+  border-radius: 15px;             /* Rounded corners */
+  text-decoration: none;            /* Removes link underline */
+  color: var(--text-dark);          /* Text color */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Light shadow for depth */
+  border: 3px solid var(--mid-purple);     /* Purple border */
+  transition: 0.3s;                        /* Smooth hover animation */
+}
+
+.service-preview-card:hover {
+  transform: scale(1.03);           /* Slight zoom on hover */
+  background: var(--soft-purple);   /* Background changes to soft purple */
+}
+
+
+/* ------------------------ */
+/* REVIEW CAROUSEL CARDS    */
+/* ------------------------ */
+.review-card {
+  background: white;                 /* Card background */
+  padding: 30px;                     /* Internal spacing */
+  border-radius: 15px;               /* Rounded corners */
+  text-align: center;                /* Center content */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Shadow for depth */
+  max-width: 600px;                  /* Limit card width */
+  margin: auto;                      /* Center horizontally */
+  border: 3px solid var(--mid-purple); /* Purple border */
+}
+
+
+/* ============================== */
+/* FLOATING REACH OUT BUTTON */
+/* ============================== */
+.reach-float-btn {
+    position: fixed;                 /* Stays in place on scroll */
+    right: 0;                        /* Touches right edge of screen */
+    top: 40%;                        /* 40% down from top */
+    transform: translateY(-50%);     /* Centers button vertically */
+    background: var(--deep-purple);  /* Button color */
+    color: white;                     /* Text color */
+    padding: 12px 20px;               /* Space inside button */
+    font-weight: bold;                 /* Bold text */
+    cursor: pointer;                   /* Shows hand cursor */
+    z-index: 9999;                     /* Stays on top of other content */
+    border-radius: 10px 0 0 10px;     /* Rounds left corners only */
+    writing-mode: vertical-rl;        /* Rotates text vertically */
+    text-orientation: mixed;          /* Keeps letters upright */
+    border: 2px solid var(--mid-purple); /* Purple border */
+    transition: 0.3s;                 /* Smooth hover transition */
+}
+
+.reach-float-btn:hover {
+    background: var(--text-dark);     /* Darkens background on hover */
+}
+ 
+
+/* ============================== */
+/* CONTACT PANEL */
+/* ============================== */
+#contactToggle {
+    display: none;   /* Hides the checkbox input used to toggle panel */
+}
+
+.contact-panel {
+    position: fixed;           /* Stays in place on scroll */
+    top: 0;                    /* Align to top */
+    right: -350px;             /* Hidden offscreen initially */
+    width: 320px;              /* Panel width */
+    height: 100vh;             /* Full height of viewport */
+    background: var(--soft-purple); /* Background color */
+    padding: 20px;             /* Inner spacing */
+    border-left: 3px solid var(--mid-purple); /* Border to separate from page */
+    transition: 0.4s;          /* Smooth slide-in animation */
+    z-index: 9998;             /* Below floating button */
+    overflow-y: auto;          /* Scroll if content is too tall */
+}
+
+#contactToggle:checked ~ .contact-panel {
+    right: 0;   /* Slide panel into view when checkbox is checked */
+}
+
+.contact-panel label {
+    color: var(--text-dark);   /* Label text color */
+    font-size: 14px;           /* Label size */
+}
+
+
+/* ------------------------ */
+/* Form styling inside panel */
+/* ------------------------ */
+.contact-panel input,
+.contact-panel textarea,
+.contact-panel select {
+    border: 2px solid var(--mid-purple); /* Purple border */
+    background: var(--light-purple);     /* Light purple input background */
+    color: var(--text-dark);             /* Text color */
+}
+
+.contact-panel input:focus,
+.contact-panel textarea:focus,
+.contact-panel select:focus {
+    border-color: var(--deep-purple);    /* Darker border on focus */
+    box-shadow: 0 0 5px var(--deep-purple); /* Small glow effect */
+}
+
+.reach-submit {
+    background: var(--deep-purple) !important; /* Button color */
+    color: white !important;                   /* Text color */
+    font-weight: bold;
+}
+
+.reach-submit:hover {
+    background: var(--text-dark) !important;  /* Dark background on hover */
+}
+
+
+/* ------------------------ */
+/* Carousel arrows styling */
+/* ------------------------ */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--mid-purple); /* Purple background */
+    border-radius: 50%;                  /* Circular arrows */
+    padding: 10px;                       /* Space inside circle */
+}
+
+
+/* ------------------------ */
+/* Show More / Show Less link styling */
+/* ------------------------ */
+.toggle-bio {
+    color: var(--deep-purple);          /* Text color */
+    cursor: pointer;                    /* Pointer cursor */
+    display: inline-flex;               /* Flex container for arrow + text */
+    align-items: center;                /* Vertically center arrow and text */
+    margin-top: 10px;                   /* Space above link */
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s; /* Smooth color and arrow rotation */
+}
+
+.toggle-bio:hover {
+    color: var(--mid-purple);           /* Slight color change on hover */
+}
+
+.toggle-bio .arrow {
+    display: inline-block;
+    margin-right: 5px;                  /* Space between arrow and text */
+    transition: transform 0.3s;         /* Smooth rotation */
+}
+
+.toggle-bio[aria-expanded="true"] .arrow {
+    transform: rotate(180deg);          /* Arrow points down when expanded */
+}
+ 
+
+/* ------------------------ */
+/* Credential images under About */
+/* ------------------------ */
+.credential-img {
+    max-height: 80px;                   /* Max height */
+    height: auto;                       /* Maintain aspect ratio */
+    width: auto;                        /* Scale width proportionally */
+    border-radius: 8px;                 /* Slightly rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Light shadow */
+}
+
+/* ------------------------ */
+/* Center ONLY the title for the Lost Coin story */
+/* ------------------------ */
+.about-center-title {
+    text-align: center;   /* Center text horizontally */
+    margin-bottom: 15px;  /* Space below heading */
+}
+
+
+/* ------------------------ */
+/* Control the image size + center it */
+/* ------------------------ */
+.about-center-image {
+    max-width: 400px; 
+    width: 100%;           /* Scale responsively */
+    border-radius: 10px;   /* Rounded corners */
+}
+
+.video-caption {
+    font-size: 18px;       /* Slightly bigger than default text */
+    font-weight: 600;      /* Semi-bold */
+    text-align: center;    /* Centered under video */
+}
+
+
+/* ------------------------ */
+/* TEAM SECTION             */
+/* ------------------------ */
+.team-frame {
+  width: 180px;             /* Frame width */
+  height: 180px;            /* Frame height */
+  border-radius: 50%;       /* Circular frame */
+  overflow: hidden;         /* Crop overflowing image */
+  margin: auto;             /* Center frame horizontally */
+  border: 6px solid var(--deep-purple); /* Purple border */
+}
+
+.team-pic {
+  width: 100%;              /* Image fills frame */
+  height: 100%;             /* Image fills frame */
+  object-fit: cover;        /* Crop image proportionally */
+}
+
+
+/* ------------------------ */
+/* FOOTER STYLING           */
+/* ------------------------ */
+.footer-bg {
+  background: var(--soft-purple);       /* Footer background */
+  border: 3px solid var(--mid-purple);  /* Footer border */
+  border-radius: 15px;                  /* Rounded corners */
+}
+
+footer .arrow {
+  transition: transform 0.3s;           /* Arrow rotation animation */
+}
+
+footer a[aria-expanded="true"] .arrow {
+  transform: rotate(180deg);            /* Rotate arrow when section is expanded */
+}
+
+footer a:hover {
+  color: var(--deep-purple);            /* Text color change on hover */
+  text-decoration: none;                /* Remove underline */
+}
+
+
+/* ------------------------ */
+/* Services specific styling */
+/* ------------------------ */
+.forensic-services {
+    background-color: #2c2150; /* Dark purple background for service highlights */
+    color: white;              /* Text color */
+    padding: 20px;             /* Internal spacing */
+    border-radius: 15px;       /* Rounded corners */
+}
+
+.service-check {
+    width: 24px;  /* Checkmark icon width */
+    height: 24px; /* Checkmark icon height */
+}
+

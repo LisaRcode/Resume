@@ -39,42 +39,58 @@
             <h2>About Me</h2>
             <p>Hello! I am Lisa Bontrager, a passionate web developer learning in more ways than others on what I really
                 want to do in this wide world. I enjoy creating, exploring, and trying new things as much as I can.</p>
-            <img src="" alt="Profile photo of Lisa Bontrager">
+            <img src="imgs/ProfilePic.JPG" alt="Profile photo of Lisa Bontrager" class="profile-img">
         </section>
 
         <!-- Skills Section -->
-        <section>
+        <section id="skills">
             <h2>Skills</h2>
-            <ul >
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+            <ul class="skills-list">
+                <li>HTML, CSS & C#</li>
+                <li>Git & GitHub</li>
+                <li>Responsive Design</li>
+                <li>SEO & Accessibility</li>
             </ul>
-        </section>
 
         <!-- Projects Section -->
-        <section id="projects">
+      <section id="projects">
             <h2>Projects</h2>
 
             <div class="project-card">
-                <h3></h3>
-                <p></p>
-                <a href="" target="_blank">View Project</a>
+                <h3>Pawfect Pet Care</h3>
+                <p>A fun web project demonstrating HTML, CSS.</p>
+                <a href="webprojects/PawfectPetCare/index.html" target="_blank">View Project</a>
             </div>
 
             <div class="project-card">
-                <h3></h3>
-                <p></p>
-                <a href="" target="_blank">View Project</a>
+                <h3>The Lost Coin</h3>
+                <p>Another amazing, fun web project demonstrating HTML, CSS.</p>
+                <a href="webprojects/TheLostCoin/index.html" target="_blank">View Project</a>
             </div>
 
             <div class="project-card">
-                <h3></h3>
-                <p></p>
-                <a href="" target="_blank">View Project</a>
+                <h3>Fit For Fitness</h3>
+                <p>Another amazing, fun web project demonstrating HTML, CSS.</p>
+                <a href="webprojects/FitForFitness/index.html" target="_blank">View Project</a>
             </div>
 
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
         </section>
 
 

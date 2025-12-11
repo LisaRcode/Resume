@@ -59,6 +59,17 @@ section {
   padding: 2rem 1rem;
 }
 
+.profile-img {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 1rem;
+}
+
+.skills-list {
+  list-style: square inside;
+  padding-left: 1rem;
+}
+
 .project-card {
   border: 1px solid #ccc;
   padding: 1rem;
