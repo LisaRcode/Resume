@@ -26,13 +26,19 @@ ul {
 /* ==============================
    Header Styles
    ============================== */
+
+/* Sticky Header */
 header {
   background-color: #4b0082;
   color: white;
   text-align: center;
   padding: 2rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
+/* Name & Subtitle */
 header h1 {
   font-size: 2rem;
 }
@@ -42,14 +48,30 @@ header p {
   margin-bottom: 1rem;
 }
 
+/* Navigation Layout */
 nav ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
+/* Combined Navigation Style */
 nav a {
   font-weight: bold;
+  color: #e8d7ff;
+  padding: 8px 14px;
+  margin: 0 4px;
+  border-radius: 10px;      
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+/* Hover Effects */
+nav a:hover {
+  background: #6a0dad;
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 /* ==============================
@@ -79,32 +101,22 @@ section {
 }
 
 /* ==============================
-   Contact Form
+   Contact Section
    ============================== */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.contact-methods {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
 }
 
-input, textarea {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  padding: 0.7rem;
-  border: none;
-  background-color: #4b0082;
-  color: white;
+.contact-methods li {
+  margin-bottom: 0.5rem;
   font-weight: bold;
-  cursor: pointer;
-  border-radius: 4px;
 }
 
-button:hover {
-  background-color: #6a00b8;
+.contact-methods a {
+  color: #4b0082;
+  text-decoration: underline;
 }
 
 /* ==============================
@@ -117,3 +129,28 @@ footer {
   color: white;
 }
 
+/* ==============================
+   Media Queries (Tablet)
+   ============================== */
+@media (min-width: 600px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+/* ==============================
+   Media Queries (Desktop)
+   ============================== */
+@media (min-width: 900px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  section {
+    flex: 1;
+  }
+}
